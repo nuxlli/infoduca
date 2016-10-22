@@ -11,5 +11,7 @@
 // about supported directives.
 //
 //= require angular
+//= require angular-router
+//= require main
 //= require turbolinks
 //= require_tree .
