@@ -11,6 +11,7 @@ systems({
     // Steps to execute before running instances
     provision: [
       "bundle install --path /azk/bundler",
+      "bundle exec rake db:migrate",
     ],
     workdir: "/azk/#{manifest.dir}",
     shell: "/bin/bash",
