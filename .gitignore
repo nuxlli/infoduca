@@ -1,0 +1,15 @@
+*.gem
+*.rbc
+.bundle
+.config
+.ruby-gemset
+.azk
+.env
+pkg
+rdoc
+tmp
+log
+
+db/*.sqlite
+.DS_Store
+.localeapp
