@@ -10,8 +10,12 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+
+
 //= require angular
 //= require angular-route
+//= require angular-rails-templates
+//= require_tree ./templates
 //= require turbolinks
 //= require_tree .
 //= require_tree ./controllers
