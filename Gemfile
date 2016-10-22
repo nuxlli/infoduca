@@ -49,3 +49,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'angularjs-rails'
 gem 'wombat', '~> 2.5', '>= 2.5.1'
+gem 'angular-rails-templates'

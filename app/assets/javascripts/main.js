@@ -1,5 +1,4 @@
-var infoduca = angular.module ('infoduca',
-['ngRoute', 'mainCtrl','chartsCtrl']);
+var infoduca = angular.module ('infoduca', ['ngRoute','chartsCtrl']);
 
 infoduca.config(function ($routeProvider, $locationProvider) {
     $routeProvider

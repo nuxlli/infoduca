@@ -12,6 +12,8 @@ systems({
     provision: [
       "bundle install --path /azk/bundler",
       "bundle exec rake db:migrate",
+      "npm install bower",
+      "bower install --allow-root"
     ],
     workdir: "/azk/#{manifest.dir}",
     shell: "/bin/bash",
@@ -20,6 +22,8 @@ systems({
     mounts: {
       '/azk/#{manifest.dir}': sync("."),
       '/azk/bundler': persistent("./bundler"),
+      '/azk/#{manifest.dir}/node_modules': persistent("./node_modules"),
+      '/azk/#{manifest.dir}/vendor/assets/bower_components': persistent("bower_components"),
       '/azk/#{manifest.dir}/tmp': persistent("./tmp"),
       '/azk/#{manifest.dir}/log': path("./log"),
       '/azk/#{manifest.dir}/.bundle': path("./.bundle"),
@@ -38,6 +42,7 @@ systems({
       // if you're setting it in a .env file
       RUBY_ENV: "development",
       BUNDLE_APP_CONFIG: "/azk/bundler",
+      PATH: "/azk/#{manifest.dir}/node_modules/.bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/opt/rubies/ruby-2.3.1/bin"
     },
   },
   postgres: {
