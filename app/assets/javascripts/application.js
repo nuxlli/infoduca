@@ -12,8 +12,7 @@
 //
 //= require angular
 //= require angular-route
-//= require main
-//= require chartsController
-//= require chartsService
 //= require turbolinks
 //= require_tree .
+//= require_tree ./controllers
+//= require_tree ./services
