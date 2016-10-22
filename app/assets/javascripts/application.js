@@ -12,7 +12,8 @@
 //
 //= require angular
 //= require angular-route
-//= require angular-rails-templates
+//= require main
+//= require chartsController
+//= require chartsService
 //= require turbolinks
 //= require_tree .
-//= require_tree ../templates
